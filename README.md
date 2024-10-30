@@ -121,3 +121,75 @@
 * Category — Product.
 * Product — ProductRating.
 * Product — ProductReview.
+## SQL запросы для создания:
+SQL
+CREATE TABLE "User" (
+    Id SERIAL PRIMARY KEY,
+    Login VARCHAR(50) UNIQUE NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    PasswordHash VARCHAR(255) NOT NULL,
+    RoleId INT REFERENCES "Role"(Id),
+    RegDate DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE "Role" (
+    Id SERIAL PRIMARY KEY,
+    RoleName VARCHAR(50) UNIQUE NOT NULL
+);
+
+CREATE TABLE "Category" (
+    Id SERIAL PRIMARY KEY,
+    NameOfCategory VARCHAR(50) UNIQUE NOT NULL
+);
+
+CREATE TABLE "Product" (
+    Id SERIAL PRIMARY KEY,
+    NameOfProduct VARCHAR(100) NOT NULL,
+    CategoryId INT REFERENCES "Category"(Id),
+    Description TEXT,
+    Price NUMERIC(10, 2) NOT NULL CHECK (Price >= 0),
+    Rating NUMERIC(2, 1) DEFAULT 0 CHECK (Rating BETWEEN 0 AND 5),
+    InStorage BOOLEAN DEFAULT TRUE
+);
+
+CREATE TABLE "ProductReview" (
+    Id SERIAL PRIMARY KEY,
+    UserId INT REFERENCES "User"(Id) ON DELETE CASCADE,
+    ProductId INT REFERENCES "Product"(Id) ON DELETE CASCADE,
+    Description TEXT NOT NULL,
+    DateOfReview DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE "ProductRating" (
+    Id SERIAL PRIMARY KEY,
+    UserId INT REFERENCES "User"(Id) ON DELETE CASCADE,
+    ProductId INT REFERENCES "Product"(Id) ON DELETE CASCADE,
+    Mark INT CHECK (Mark BETWEEN 1 AND 5)
+);
+
+CREATE TABLE "Cart" (
+    Id SERIAL PRIMARY KEY,
+    UserId INT REFERENCES "User"(Id) ON DELETE CASCADE,
+    ListOfProducts TEXT,  -- Список продуктов в виде JSON или другой структуры
+    TotalPrice NUMERIC(10, 2) DEFAULT 0 CHECK (TotalPrice >= 0)
+);
+
+CREATE TABLE "Order" (
+    Id SERIAL PRIMARY KEY,
+    UserId INT REFERENCES "User"(Id),
+    CartId INT REFERENCES "Cart"(Id),
+    Status VARCHAR(20) NOT NULL,
+    DateOfOrder DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE "Storage" (
+    ProductId INT PRIMARY KEY REFERENCES "Product"(Id),
+    Count INT NOT NULL CHECK (Count >= 0)
+);
+
+CREATE TABLE "SalesReview" (
+    Id SERIAL PRIMARY KEY,
+    DateStart DATE NOT NULL,
+    DateEnd DATE NOT NULL,
+    TotalPriceInPeriod NUMERIC(15, 2) CHECK (TotalPriceInPeriod >= 0)
+);
