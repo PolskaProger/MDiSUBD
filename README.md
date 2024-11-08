@@ -173,7 +173,6 @@ CREATE TABLE "ProductRating" (
 CREATE TABLE "Cart" (
     Id SERIAL PRIMARY KEY,
     UserId INT REFERENCES "User"(Id) ON DELETE CASCADE,
-    ListOfProducts TEXT,  -- Список продуктов в виде JSON или другой структуры
     TotalPrice NUMERIC(10, 2) DEFAULT 0 CHECK (TotalPrice >= 0)
 );
 
@@ -201,7 +200,8 @@ CREATE TABLE "CartItem" (
 ```
 
 # Запросы для получения данных:
-## 1 User
+
+## 1. User
 ### Create
 ```sql
 INSERT INTO "User" (Login, Email, PasswordHash, RoleId, RegDate)
@@ -229,4 +229,256 @@ SELECT * FROM "User" ORDER BY RegDate DESC;
 SELECT * FROM "User" WHERE RoleId = 2;
 SELECT * FROM "User" ORDER BY Email ASC;
 SELECT * FROM "User" ORDER BY Email ASC;
+```
+
+## 2. Role
+### Create
+```sql
+INSERT INTO "Role" (RoleName)
+VALUES ('Admin');
+```
+### Read
+```sql
+SELECT * FROM "Role";
+SELECT * FROM "Role" WHERE Id = 1;
+SELECT * FROM "Role" WHERE RoleName = 'Admin';
+```
+### Update
+```sql
+UPDATE "Role"
+SET RoleName = 'Manager'
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "Role" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "Role" ORDER BY RoleName ASC;
+```
+
+## 3. Category
+### Create
+```sql
+INSERT INTO "Category" (NameOfCategory)
+VALUES ('AK-style');
+```
+### Read
+```sql
+SELECT * FROM "Category";
+SELECT * FROM "Category" WHERE Id = 1;
+SELECT * FROM "Category" WHERE NameOfCategory = 'AK-style';
+```
+### Update
+```sql
+UPDATE "Category"
+SET NameOfCategory = 'AR-style'
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "Category" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "Category" ORDER BY NameOfCategory ASC;
+```
+
+## 4. Product
+### Create
+```sql
+INSERT INTO "Product" (NameOfProduct, CategoryId, Description, Price, Rating, InStorage)
+VALUES ('M4A1', 1, 'Классный привод', 799.99, 4.8, true);
+```
+### Read
+```sql
+SELECT * FROM "Product";
+SELECT * FROM "Product" WHERE Id = 1;
+SELECT * FROM "Product" WHERE NameOfProduct = 'M4A1';
+```
+### Update
+```sql
+UPDATE "Product"
+SET Description = 'Привод АГОНЬ', Price = 899.99, Rating = 4.9
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "Product" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "Product" ORDER BY NameOfProduct ASC;
+SELECT * FROM "Product" WHERE CategoryId = 1 ORDER BY Price DESC;
+SELECT * FROM "Product" WHERE InStorage = true ORDER BY Rating DESC;
+```
+
+## 5. Product
+### Create
+```sql
+INSERT INTO "ProductReview" (UserId, ProductId, Description, DateOfReview)
+VALUES (1, 1, 'Great product, highly recommended!', CURRENT_DATE);
+```
+### Read
+```sql
+SELECT * FROM "ProductReview";
+SELECT * FROM "ProductReview" WHERE Id = 1;
+SELECT * FROM "ProductReview" WHERE UserId = 1 AND ProductId = 1;
+```
+### Update
+```sql
+UPDATE "ProductReview"
+SET Description = 'Excellent product, I'm very satisfied.'
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "ProductReview" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "ProductReview" ORDER BY DateOfReview DESC;
+SELECT * FROM "ProductReview" WHERE ProductId = 1 ORDER BY DateOfReview DESC;
+SELECT * FROM "ProductReview" WHERE UserId = 1 ORDER BY DateOfReview ASC;
+```
+
+## 6. ProductRating
+### Create
+```sql
+INSERT INTO "ProductRating" (UserId, ProductId, Mark)
+VALUES (1, 1, 5);
+```
+### Read
+```sql
+SELECT * FROM "ProductRating";
+SELECT * FROM "ProductRating" WHERE Id = 1;
+SELECT * FROM "ProductRating" WHERE UserId = 1 AND ProductId = 1;
+```
+### Update
+```sql
+UPDATE "ProductRating"
+SET Mark = 4
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "ProductRating" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "ProductRating" ORDER BY Mark DESC;
+SELECT * FROM "ProductRating" WHERE ProductId = 1 ORDER BY Mark DESC;
+SELECT * FROM "ProductRating" WHERE UserId = 1 ORDER BY Mark ASC;
+```
+
+## 7. Cart
+### Create
+```sql
+INSERT INTO "Cart" (UserId, TotalPrice)
+VALUES (1, 0);
+```
+### Read
+```sql
+SELECT * FROM "Cart";
+SELECT * FROM "Cart" WHERE Id = 1;
+SELECT * FROM "Cart" WHERE UserId = 1;
+```
+### Update
+```sql
+UPDATE "Cart"
+SET TotalPrice = 5000
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "Cart" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "Cart" ORDER BY TotalPrice DESC;
+SELECT * FROM "Cart" WHERE UserId = 1 ORDER BY TotalPrice ASC;
+```
+
+## 8. CartItem
+### Create
+```sql
+INSERT INTO "CartItem" (ProductId, CartId, Count)
+VALUES (1, 1, 2);
+```
+### Read
+```sql
+SELECT * FROM "CartItem";
+SELECT * FROM "CartItem" WHERE Id = 1;
+SELECT * FROM "CartItem" WHERE CartId = 1;
+```
+### Update
+```sql
+UPDATE "CartItem"
+SET Count = 3
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "CartItem" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "CartItem" ORDER BY Count DESC;
+SELECT * FROM "CartItem" WHERE CartId = 1 ORDER BY ProductId ASC;
+```
+
+## 9. Order
+### Create
+```sql
+INSERT INTO "Order" (UserId, CartId, Status)
+VALUES (1, 1, 'Pending');
+```
+### Read
+```sql
+SELECT * FROM "Order";
+SELECT * FROM "Order" WHERE Id = 1;
+SELECT * FROM "Order" WHERE UserId = 1;
+```
+### Update
+```sql
+UPDATE "Order"
+SET Status = 'Completed'
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "Order" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "Order" ORDER BY DateOfOrder DESC;
+SELECT * FROM "Order" WHERE UserId = 1 ORDER BY DateOfOrder ASC;
+SELECT * FROM "Order" WHERE Status = 'Pending' ORDER BY DateOfOrder DESC;
+```
+
+## 10. Storage
+### Create
+```sql
+INSERT INTO "Storage" (ProductId, Count)
+VALUES (1, 50);
+```
+### Read
+```sql
+SELECT * FROM "Storage";
+SELECT * FROM "Storage" WHERE ProductId = 1;
+```
+### Update
+```sql
+UPDATE "Storage"
+SET Count = 30
+WHERE ProductId = 1;
+```
+### Delete
+```sql
+DELETE FROM "Storage" WHERE ProductId = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "Storage" ORDER BY Count DESC;
 ```
