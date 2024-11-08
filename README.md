@@ -122,7 +122,8 @@
 * Product — ProductRating.
 * Product — ProductReview.
 ## SQL запросы для создания:
-SQL
+
+```sql
 CREATE TABLE "User" (
     Id SERIAL PRIMARY KEY,
     Login VARCHAR(50) UNIQUE NOT NULL,
@@ -132,16 +133,19 @@ CREATE TABLE "User" (
     RegDate DATE DEFAULT CURRENT_DATE
 );
 
+```sql
 CREATE TABLE "Role" (
     Id SERIAL PRIMARY KEY,
     RoleName VARCHAR(50) UNIQUE NOT NULL
 );
 
+```sql
 CREATE TABLE "Category" (
     Id SERIAL PRIMARY KEY,
     NameOfCategory VARCHAR(50) UNIQUE NOT NULL
 );
 
+```sql
 CREATE TABLE "Product" (
     Id SERIAL PRIMARY KEY,
     NameOfProduct VARCHAR(100) NOT NULL,
@@ -152,6 +156,7 @@ CREATE TABLE "Product" (
     InStorage BOOLEAN DEFAULT TRUE
 );
 
+```sql
 CREATE TABLE "ProductReview" (
     Id SERIAL PRIMARY KEY,
     UserId INT REFERENCES "User"(Id) ON DELETE CASCADE,
@@ -160,6 +165,7 @@ CREATE TABLE "ProductReview" (
     DateOfReview DATE DEFAULT CURRENT_DATE
 );
 
+```sql
 CREATE TABLE "ProductRating" (
     Id SERIAL PRIMARY KEY,
     UserId INT REFERENCES "User"(Id) ON DELETE CASCADE,
@@ -167,6 +173,7 @@ CREATE TABLE "ProductRating" (
     Mark INT CHECK (Mark BETWEEN 1 AND 5)
 );
 
+```sql
 CREATE TABLE "Cart" (
     Id SERIAL PRIMARY KEY,
     UserId INT REFERENCES "User"(Id) ON DELETE CASCADE,
@@ -174,6 +181,7 @@ CREATE TABLE "Cart" (
     TotalPrice NUMERIC(10, 2) DEFAULT 0 CHECK (TotalPrice >= 0)
 );
 
+```sql
 CREATE TABLE "Order" (
     Id SERIAL PRIMARY KEY,
     UserId INT REFERENCES "User"(Id),
@@ -182,11 +190,13 @@ CREATE TABLE "Order" (
     DateOfOrder DATE DEFAULT CURRENT_DATE
 );
 
+```sql
 CREATE TABLE "Storage" (
     ProductId INT PRIMARY KEY REFERENCES "Product"(Id),
     Count INT NOT NULL CHECK (Count >= 0)
 );
 
+```sql
 CREATE TABLE "SalesReview" (
     Id SERIAL PRIMARY KEY,
     DateStart DATE NOT NULL,
