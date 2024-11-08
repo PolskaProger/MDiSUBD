@@ -201,3 +201,32 @@ CREATE TABLE "CartItem" (
 ```
 
 # Запросы для получения данных:
+## 1 User
+### Create
+```sql
+INSERT INTO "User" (Login, Email, PasswordHash, RoleId, RegDate)
+VALUES ('Admin_User', 'admin@example.com', 'PasswordHash', 1, CURRENT_DATE);
+```
+### Read
+```sql
+SELECT * FROM "User";
+SELECT * FROM "User" WHERE Id = 1;
+SELECT * FROM "User" WHERE Login = 'Admin_User';
+```
+### Update
+```sql
+UPDATE "User"
+SET Email = 'newemail@example.com', PasswordHash = 'newHashPassword'
+WHERE Id = 1;
+```
+### Delete
+```sql
+DELETE FROM "User" WHERE Id = 1;
+```
+### Filtration and sort
+```sql
+SELECT * FROM "User" ORDER BY RegDate DESC;
+SELECT * FROM "User" WHERE RoleId = 2;
+SELECT * FROM "User" ORDER BY Email ASC;
+SELECT * FROM "User" ORDER BY Email ASC;
+```
