@@ -15,7 +15,7 @@
 * Отзывы и рейтинги: покупатели могут оставлять отзывы и ставить оценки товарам.
 
 # 3. Таблицы сущностей в БД и их связь
-![Image alt](https://github.com/PolskaProger/MDiSUBD/blob/main/LR1DB.drawio.png)
+![Image alt](https://github.com/PolskaProger/MDiSUBD/blob/main/DB.png)
 ## 1. User (Пользователь):
 ### Поля:
 * Id — первичный ключ (PK).
