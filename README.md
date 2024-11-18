@@ -194,7 +194,7 @@ CREATE TABLE "Storage" (
 
 CREATE TABLE "CartItem" (
     Id SERIAL PRIMARY KEY,
-    ProductId INT PRIMARY KEY REFERENCES "Product"(Id),
+    ProductId INT REFERENCES "Product"(Id),
     CartId INT REFERENCES "Cart"(Id),
     Count INT
 );
