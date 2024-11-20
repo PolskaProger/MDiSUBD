@@ -493,8 +493,8 @@ SELECT * FROM "Storage" ORDER BY Count DESC;
 ```sql
 SELECT *
 FROM "User"
-WHERE (Role = 'Admin' OR Role = 'Customer')
-  AND RegDate >= '2023-01-01'
+WHERE (roleid = 1)
+  AND RegDate >= '2024-01-01'
   AND Email LIKE '%@example.com';
 ```
 
@@ -503,9 +503,9 @@ WHERE (Role = 'Admin' OR Role = 'Customer')
 ```sql
 SELECT *
 FROM "Product"
-WHERE Category = 'Electronics'
-  AND Price BETWEEN 100 AND 500
-  AND InStorage > 10;
+WHERE CategoryId = 1
+  AND Price BETWEEN 100 AND 1000
+  AND InStorage = true;
 ```
 
 ##### c. Для таблицы `Order`
@@ -516,9 +516,9 @@ FROM "Order"
 WHERE UserId IN (
     SELECT Id
     FROM "User"
-    WHERE Role = 'Customer'
+    WHERE roleid=1
 )
-AND DateOfOrder >= '2023-01-01';
+AND DateOfOrder >= '2024-01-01';
 ```
 
 #### Запрос с вложенной конструкцией
@@ -531,7 +531,7 @@ FROM "Product"
 WHERE Price < (
     SELECT AVG(Price)
     FROM "Product"
-    WHERE Category = 'Ammunition'
+    WHERE categoryid = 1
 );
 ```
 
@@ -552,11 +552,11 @@ WHERE UserId = (
 ##### a. Получение пользователей с количеством заказов
 
 ```sql
-SELECT u.Login, COUNT(o.OrderId) AS OrderCount
+SELECT u.Login, COUNT(o.Id) AS OrderCount
 FROM "User" u
 LEFT JOIN "Order" o ON u.Id = o.UserId
 GROUP BY u.Login
-HAVING COUNT(o.OrderId) > 1;
+HAVING COUNT(o.Id) >= 1;
 ```
 
 ##### b. Получение товаров в корзине с общей стоимостью
@@ -568,7 +568,7 @@ JOIN "Product" p ON ci.ProductId = p.Id
 WHERE ci.CartId = (
     SELECT Id
     FROM "Cart"
-    WHERE UserId = 1  -- Замените на нужный UserId
+    WHERE UserId = 1
 )
 GROUP BY p.NameOfProduct;
 ```
@@ -580,7 +580,7 @@ GROUP BY p.NameOfProduct;
 ##### a. Получение заказов с информацией о пользователе
 
 ```sql
-SELECT o.OrderId, u.Login, o.DateOfOrder, o.TotalPrice
+SELECT o.Id, u.Login, o.DateOfOrder, o.cartid
 FROM "Order" o
 INNER JOIN "User" u ON o.UserId = u.Id;
 ```
@@ -590,7 +590,7 @@ INNER JOIN "User" u ON o.UserId = u.Id;
 ##### b. Получение всех пользователей и их корзин (если есть)
 
 ```sql
-SELECT u.Login, c.TotalPrice
+SELECT u.Login, c.TotalPrice, c.id
 FROM "User" u
 LEFT JOIN "Cart" c ON u.Id = c.UserId;
 ```
@@ -610,7 +610,7 @@ RIGHT JOIN "User" u ON c.UserId = u.Id;
 ##### d. Получение всех пользователей и всех заказов, даже если у них нет соответствий
 
 ```sql
-SELECT u.Login, o.OrderId, o.DateOfOrder
+SELECT u.Login, o.Id, o.DateOfOrder
 FROM "User" u
 FULL OUTER JOIN "Order" o ON u.Id = o.UserId;
 ```
@@ -632,9 +632,9 @@ CROSS JOIN "Product" p;
 ##### a. Подсчет количества пользователей по ролям
 
 ```sql
-SELECT Role, COUNT(*) AS UserCount
+SELECT RoleId, COUNT(*) AS UserCount
 FROM "User"
-GROUP BY Role;
+GROUP BY RoleId;
 ```
 
 ##### b. Подсчет количества заказов по пользователям
@@ -648,9 +648,9 @@ GROUP BY UserId;
 ##### c. Сумма цен товаров в каждой категории
 
 ```sql
-SELECT Category, SUM(Price) AS TotalValue
+SELECT CategoryId, SUM(Price) AS TotalValue
 FROM "Product"
-GROUP BY Category;
+GROUP BY CategoryId;
 ```
 
 #### HAVING
@@ -658,9 +658,9 @@ GROUP BY Category;
 ##### d. Получение категорий с средней ценой выше 100
 
 ```sql
-SELECT Category, AVG(Price) AS AveragePrice
+SELECT CategoryId, AVG(Price) AS AveragePrice
 FROM "Product"
-GROUP BY Category
+GROUP BY CategoryId
 HAVING AVG(Price) > 100;
 ```
 
@@ -678,7 +678,7 @@ HAVING COUNT(*) > 3;
 ##### f. Нумерация пользователей по дате регистрации в каждой роли
 
 ```sql
-SELECT Id, Login, Role,
+SELECT Id, Login, RoleId,
        ROW_NUMBER() OVER (PARTITION BY Role ORDER BY RegDate) AS RowNum
 FROM "User";
 ```
@@ -686,7 +686,7 @@ FROM "User";
 ##### g. Получение средней оценки для каждого продукта с указанием ранга
 
 ```sql
-SELECT ProductId, Rating,
+SELECT ProductId, Description,
        RANK() OVER (PARTITION BY ProductId ORDER BY Rating DESC) AS RatingRank
 FROM "ProductReview";
 ```
@@ -699,7 +699,7 @@ FROM "ProductReview";
 SELECT Id, Login AS Name FROM "User"
 UNION
 SELECT Id, NameOfProduct AS Name FROM "Product";
-```ц
+```
 
 ### 4. Пул запросов для сложных операций с данными
 
@@ -724,8 +724,8 @@ SELECT *
 FROM "Product" p
 WHERE EXISTS (
     SELECT 1
-    FROM "ProductReview" r
-    WHERE r.ProductId = p.Id AND r.Rating < 3
+    FROM "ProductRating" r
+    WHERE r.ProductId = p.Id AND r.mark < 3
 );
 ```
 
@@ -754,13 +754,14 @@ WHERE InStorage = 0;
 ##### e. Получение статуса заказа в зависимости от его суммы
 
 ```sql
-SELECT OrderId, TotalPrice,
+SELECT o.OrderId, c.TotalPrice,
        CASE
-           WHEN TotalPrice > 1000 THEN 'High Value'
-           WHEN TotalPrice BETWEEN 500 AND 1000 THEN 'Medium Value'
+           WHEN c.TotalPrice > 1000 THEN 'High Value'
+           WHEN c.TotalPrice BETWEEN 500 AND 1000 THEN 'Medium Value'
            ELSE 'Low Value'
        END AS OrderStatus
-FROM "Order";
+FROM "Order" o
+JOIN "Cart" c ON o.CartId = c.Id;
 ```
 
 ##### f. Получение статуса продукта в зависимости от его наличия
@@ -768,8 +769,7 @@ FROM "Order";
 ```sql
 SELECT Id, NameOfProduct,
        CASE
-           WHEN InStorage = 0 THEN 'Out of Stock'
-           WHEN InStorage < 5 THEN 'Low Stock'
+           WHEN InStorage = false THEN 'Out of Stock'
            ELSE 'In Stock'
        END AS StockStatus
 FROM "Product";
@@ -782,7 +782,7 @@ FROM "Product";
 ```sql
 EXPLAIN SELECT *
 FROM "User"
-WHERE Role = 'Customer';
+WHERE RoleId = 1;
 ```
 
 ##### h. Анализ выполнения запроса на получение всех заказов
