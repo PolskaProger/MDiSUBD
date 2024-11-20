@@ -484,3 +484,310 @@ DELETE FROM "Storage" WHERE ProductId = 1;
 ```sql
 SELECT * FROM "Storage" ORDER BY Count DESC;
 ```
+
+# Лабораторная работа №4
+### 1. Пул запросов для сложной выборки
+#### Запрос с несколькими условиями
+##### a. Для таблицы `User`
+
+```sql
+SELECT *
+FROM "User"
+WHERE (Role = 'Admin' OR Role = 'Customer')
+  AND RegDate >= '2023-01-01'
+  AND Email LIKE '%@example.com';
+```
+
+##### b. Для таблицы `Product`
+
+```sql
+SELECT *
+FROM "Product"
+WHERE Category = 'Electronics'
+  AND Price BETWEEN 100 AND 500
+  AND InStorage > 10;
+```
+
+##### c. Для таблицы `Order`
+
+```sql
+SELECT *
+FROM "Order"
+WHERE UserId IN (
+    SELECT Id
+    FROM "User"
+    WHERE Role = 'Customer'
+)
+AND DateOfOrder >= '2023-01-01';
+```
+
+#### Запрос с вложенной конструкцией
+
+##### a. Для таблицы `Product`
+
+```sql
+SELECT *
+FROM "Product"
+WHERE Price < (
+    SELECT AVG(Price)
+    FROM "Product"
+    WHERE Category = 'Ammunition'
+);
+```
+
+##### b. Для таблицы `Cart`
+
+```sql
+SELECT *
+FROM "Cart"
+WHERE UserId = (
+    SELECT Id
+    FROM "User"
+    WHERE Login = 'john_doe'
+);
+```
+
+#### Прочие сложные выборки
+
+##### a. Получение пользователей с количеством заказов
+
+```sql
+SELECT u.Login, COUNT(o.OrderId) AS OrderCount
+FROM "User" u
+LEFT JOIN "Order" o ON u.Id = o.UserId
+GROUP BY u.Login
+HAVING COUNT(o.OrderId) > 1;
+```
+
+##### b. Получение товаров в корзине с общей стоимостью
+
+```sql
+SELECT p.NameOfProduct, SUM(ci.Count * p.Price) AS TotalPrice
+FROM "CartItem" ci
+JOIN "Product" p ON ci.ProductId = p.Id
+WHERE ci.CartId = (
+    SELECT Id
+    FROM "Cart"
+    WHERE UserId = 1  -- Замените на нужный UserId
+)
+GROUP BY p.NameOfProduct;
+```
+
+### 2. Пул запросов для получения представлений
+
+#### INNER JOIN
+
+##### a. Получение заказов с информацией о пользователе
+
+```sql
+SELECT o.OrderId, u.Login, o.DateOfOrder, o.TotalPrice
+FROM "Order" o
+INNER JOIN "User" u ON o.UserId = u.Id;
+```
+
+#### LEFT JOIN
+
+##### b. Получение всех пользователей и их корзин (если есть)
+
+```sql
+SELECT u.Login, c.TotalPrice
+FROM "User" u
+LEFT JOIN "Cart" c ON u.Id = c.UserId;
+```
+
+#### RIGHT JOIN
+
+##### c. Получение всех корзин и их пользователей (если есть)
+
+```sql
+SELECT c.Id AS CartId, u.Login
+FROM "Cart" c
+RIGHT JOIN "User" u ON c.UserId = u.Id;
+```
+
+#### FULL OUTER JOIN
+
+##### d. Получение всех пользователей и всех заказов, даже если у них нет соответствий
+
+```sql
+SELECT u.Login, o.OrderId, o.DateOfOrder
+FROM "User" u
+FULL OUTER JOIN "Order" o ON u.Id = o.UserId;
+```
+
+#### CROSS JOIN
+
+##### e. Получение всех возможных комбинаций пользователей и продуктов
+
+```sql
+SELECT u.Login, p.NameOfProduct
+FROM "User" u
+CROSS JOIN "Product" p;
+```
+
+### 3. Пул запросов для получения сгруппированных данных
+
+#### GROUP BY + агрегирующие функции
+
+##### a. Подсчет количества пользователей по ролям
+
+```sql
+SELECT Role, COUNT(*) AS UserCount
+FROM "User"
+GROUP BY Role;
+```
+
+##### b. Подсчет количества заказов по пользователям
+
+```sql
+SELECT UserId, COUNT(*) AS OrderCount
+FROM "Order"
+GROUP BY UserId;
+```
+
+##### c. Сумма цен товаров в каждой категории
+
+```sql
+SELECT Category, SUM(Price) AS TotalValue
+FROM "Product"
+GROUP BY Category;
+```
+
+#### HAVING
+
+##### d. Получение категорий с средней ценой выше 100
+
+```sql
+SELECT Category, AVG(Price) AS AveragePrice
+FROM "Product"
+GROUP BY Category
+HAVING AVG(Price) > 100;
+```
+
+##### e. Получение пользователей с более чем 3 заказов
+
+```sql
+SELECT UserId, COUNT(*) AS OrderCount
+FROM "Order"
+GROUP BY UserId
+HAVING COUNT(*) > 3;
+```
+
+#### PARTITION и оконные функции
+
+##### f. Нумерация пользователей по дате регистрации в каждой роли
+
+```sql
+SELECT Id, Login, Role,
+       ROW_NUMBER() OVER (PARTITION BY Role ORDER BY RegDate) AS RowNum
+FROM "User";
+```
+
+##### g. Получение средней оценки для каждого продукта с указанием ранга
+
+```sql
+SELECT ProductId, Rating,
+       RANK() OVER (PARTITION BY ProductId ORDER BY Rating DESC) AS RatingRank
+FROM "ProductReview";
+```
+
+#### UNION
+
+##### h. Объединение пользователей и продуктов в одну выборку
+
+```sql
+SELECT Id, Login AS Name FROM "User"
+UNION
+SELECT Id, NameOfProduct AS Name FROM "Product";
+```ц
+
+### 4. Пул запросов для сложных операций с данными
+
+#### EXISTS
+
+##### a. Получение пользователей, у которых есть заказы
+
+```sql
+SELECT *
+FROM "User" u
+WHERE EXISTS (
+    SELECT 1
+    FROM "Order" o
+    WHERE o.UserId = u.Id
+);
+```
+
+##### b. Получение продуктов, которые имеют отзывы ниже 3
+
+```sql
+SELECT *
+FROM "Product" p
+WHERE EXISTS (
+    SELECT 1
+    FROM "ProductReview" r
+    WHERE r.ProductId = p.Id AND r.Rating < 3
+);
+```
+
+#### INSERT INTO SELECT
+
+##### c. Архивирование пользователей, зарегистрированных до 2022 года
+
+```sql
+INSERT INTO "ArchivedUser" (Id, Login, Email)
+SELECT Id, Login, Email
+FROM "User"
+WHERE RegDate < '2022-01-01';
+```
+
+##### d. Копирование продуктов в категорию "Старые товары"
+
+```sql
+INSERT INTO "OldProduct" (Id, NameOfProduct, Price)
+SELECT Id, NameOfProduct, Price
+FROM "Product"
+WHERE InStorage = 0;
+```
+
+#### CASE
+
+##### e. Получение статуса заказа в зависимости от его суммы
+
+```sql
+SELECT OrderId, TotalPrice,
+       CASE
+           WHEN TotalPrice > 1000 THEN 'High Value'
+           WHEN TotalPrice BETWEEN 500 AND 1000 THEN 'Medium Value'
+           ELSE 'Low Value'
+       END AS OrderStatus
+FROM "Order";
+```
+
+##### f. Получение статуса продукта в зависимости от его наличия
+
+```sql
+SELECT Id, NameOfProduct,
+       CASE
+           WHEN InStorage = 0 THEN 'Out of Stock'
+           WHEN InStorage < 5 THEN 'Low Stock'
+           ELSE 'In Stock'
+       END AS StockStatus
+FROM "Product";
+```
+
+#### EXPLAIN
+
+##### g. Анализ выполнения запроса на получение пользователей с определенной ролью
+
+```sql
+EXPLAIN SELECT *
+FROM "User"
+WHERE Role = 'Customer';
+```
+
+##### h. Анализ выполнения запроса на получение всех заказов
+
+```sql
+EXPLAIN SELECT *
+FROM "Order";
+```
