@@ -791,3 +791,185 @@ WHERE RoleId = 1;
 EXPLAIN SELECT *
 FROM "Order";
 ```
+
+
+# Лабораторная работа №5 (триггеры и процедуры)
+
+### Триггеры
+
+#### 1. Триггер для пересчета суммы заказа при добавлении товара
+```sql
+CREATE TRIGGER UpdateOrderTotal
+AFTER INSERT ON "CartItem"
+FOR EACH ROW
+BEGIN
+    DECLARE new_total DECIMAL(10, 2);
+    
+    -- Пересчет общей суммы заказа
+    SELECT SUM(p.Price * ci.Count) INTO new_total
+    FROM "CartItem" ci
+    JOIN "Product" p ON ci.ProductId = p.Id
+    WHERE ci.CartId = NEW.CartId;
+
+    -- Обновление суммы в корзине
+    UPDATE "Cart"
+    SET TotalPrice = new_total
+    WHERE Id = NEW.CartId;
+END;
+```
+
+#### 2. Триггер для логирования изменений в таблице заказов
+```sql
+CREATE TRIGGER LogOrderChanges
+AFTER UPDATE ON "Order"
+FOR EACH ROW
+BEGIN
+    INSERT INTO "OrderLog" (OrderId, OldStatus, NewStatus, ChangedAt)
+    VALUES (NEW.Id, OLD.Status, NEW.Status, NOW());
+END;
+```
+
+#### 3. Триггер для автоматического обновления статуса товара
+```sql
+CREATE TRIGGER UpdateProductStock
+AFTER INSERT ON "CartItem"
+FOR EACH ROW
+BEGIN
+    UPDATE "Product"
+    SET InStorage = InStorage - NEW.Count
+    WHERE Id = NEW.ProductId;
+END;
+```
+
+#### 4. Триггер для обновления статуса корзины при изменении товаров
+```sql
+CREATE TRIGGER UpdateCartStatus
+AFTER UPDATE ON "CartItem"
+FOR EACH ROW
+BEGIN
+    DECLARE cart_status VARCHAR(20);
+    
+    -- Проверка, есть ли в корзине товары
+    IF (SELECT COUNT(*) FROM "CartItem" WHERE CartId = NEW.CartId) = 0 THEN
+        SET cart_status = 'Empty';
+    ELSE
+        SET cart_status = 'Not Empty';
+    END IF;
+
+    -- Обновление статуса корзины
+    UPDATE "Cart"
+    SET Status = cart_status
+    WHERE Id = NEW.CartId;
+END;
+```
+
+#### 5. Триггер для автоматического удаления старых отзывов
+```sql
+CREATE TRIGGER DeleteOldReviews
+AFTER INSERT ON "ProductReview"
+FOR EACH ROW
+BEGIN
+    DELETE FROM "ProductReview"
+    WHERE ProductId = NEW.ProductId AND DateOfReview < NOW() - INTERVAL 1 YEAR;
+END;
+```
+
+#### 6. Триггер для логирования удаления пользователей
+```sql
+CREATE TRIGGER LogUserDeletion
+AFTER DELETE ON "User"
+FOR EACH ROW
+BEGIN
+    INSERT INTO "UserLog" (UserId, Action, Timestamp)
+    VALUES (OLD.Id, 'Deleted', NOW());
+END;
+```
+
+### Хранимые процедуры
+
+#### 1. Процедура для добавления нового пользователя
+```sql
+CREATE PROCEDURE AddUser(
+    IN p_Login VARCHAR(255),
+    IN p_Email VARCHAR(255),
+    IN p_PasswordHash VARCHAR(255)
+)
+BEGIN
+    INSERT INTO "User" (Login, Email, PasswordHash, RegDate)
+    VALUES (p_Login, p_Email, p_PasswordHash, NOW());
+END;
+```
+
+#### 2. Процедура для получения информации о пользователе по логину
+```sql
+CREATE PROCEDURE GetUserByLogin(
+    IN p_Login VARCHAR(255)
+)
+BEGIN
+    SELECT * FROM "User"
+    WHERE Login = p_Login;
+END;
+```
+
+#### 3. Процедура для обновления цены продукта
+```sql
+CREATE PROCEDURE UpdateProductPrice(
+    IN p_ProductId INT,
+    IN p_NewPrice DECIMAL(10, 2)
+)
+BEGIN
+    UPDATE "Product"
+    SET Price = p_NewPrice
+    WHERE Id = p_ProductId;
+END;
+```
+
+#### 4. Процедура для получения всех заказов пользователя
+```sql
+CREATE PROCEDURE GetUserOrders(
+    IN p_UserId INT
+)
+BEGIN
+    SELECT * FROM "Order"
+    WHERE UserId = p_UserId;
+END;
+```
+
+#### 5. Процедура для добавления товара в корзину
+```sql
+CREATE PROCEDURE AddProductToCart(
+    IN p_CartId INT,
+    IN p_ProductId INT,
+    IN p_Count INT
+)
+BEGIN
+    INSERT INTO "CartItem" (CartId, ProductId, Count)
+    VALUES (p_CartId, p_ProductId, p_Count);
+    
+    -- Триггер автоматически обновит общую сумму и статус корзины
+END;
+```
+
+#### 6. Процедура для получения всех продуктов с фильтром по категории
+```sql
+CREATE PROCEDURE GetProductsByCategory(
+    IN p_CategoryId INT
+)
+BEGIN
+    SELECT * FROM "Product"
+    WHERE Category = p_CategoryId;
+END;
+```
+
+#### 7. Процедура для обновления статуса заказа
+```sql
+CREATE PROCEDURE UpdateOrderStatus(
+    IN p_OrderId INT,
+    IN p_NewStatus VARCHAR(20)
+)
+BEGIN
+    UPDATE "Order"
+    SET Status = p_NewStatus
+    WHERE Id = p_OrderId;
+END;
+```
