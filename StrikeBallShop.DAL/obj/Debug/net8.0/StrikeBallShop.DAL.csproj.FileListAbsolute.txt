@@ -1,0 +1,16 @@
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\bin\Debug\net8.0\StrikeBallShop.DAL.deps.json
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\bin\Debug\net8.0\StrikeBallShop.DAL.dll
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\bin\Debug\net8.0\StrikeBallShop.DAL.pdb
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\bin\Debug\net8.0\StrikeBallShop.DML.dll
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\bin\Debug\net8.0\StrikeBallShop.DML.pdb
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBallShop.DAL.csproj.AssemblyReference.cache
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBallShop.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBallShop.DAL.AssemblyInfoInputs.cache
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBallShop.DAL.AssemblyInfo.cs
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBallShop.DAL.csproj.CoreCompileInputs.cache
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBallShop.DAL.sourcelink.json
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBa.613FCF93.Up2Date
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBallShop.DAL.dll
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\refint\StrikeBallShop.DAL.dll
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\StrikeBallShop.DAL.pdb
+D:\University\253505\MDiSUBD\StrikeBallShop.DAL\obj\Debug\net8.0\ref\StrikeBallShop.DAL.dll

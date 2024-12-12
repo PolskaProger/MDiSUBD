@@ -1,0 +1,13 @@
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\bin\Debug\net8.0\StrikeBallShop.DML.deps.json
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\bin\Debug\net8.0\StrikeBallShop.DML.dll
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\bin\Debug\net8.0\StrikeBallShop.DML.pdb
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\StrikeBallShop.DML.csproj.AssemblyReference.cache
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\StrikeBallShop.DML.GeneratedMSBuildEditorConfig.editorconfig
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\StrikeBallShop.DML.AssemblyInfoInputs.cache
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\StrikeBallShop.DML.AssemblyInfo.cs
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\StrikeBallShop.DML.csproj.CoreCompileInputs.cache
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\StrikeBallShop.DML.sourcelink.json
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\StrikeBallShop.DML.dll
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\refint\StrikeBallShop.DML.dll
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\StrikeBallShop.DML.pdb
+D:\University\253505\MDiSUBD\StrikeBallShop.DML\obj\Debug\net8.0\ref\StrikeBallShop.DML.dll

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "EuZ0jBou3nPFWx0F4pt+G5wIiIDQzLcaMQEzyscfk4pHtmnPXfVadneombFse8CuVH+gx+Yd8TGCTCrpPHUUFQ==",
+  "success": true,
+  "projectFilePath": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dimat\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\dimat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\dimat\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\dimat\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

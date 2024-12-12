@@ -1,0 +1,706 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\database\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\productratingrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\cartrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\cartitemrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\userrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\pages\\adminmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:pages\\adminmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\pages\\consolemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:pages\\consolemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\pages\\cartmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:pages\\cartmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\helpclasses\\consolehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:helpclasses\\consolehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\helpclasses\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:helpclasses\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\passwordhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\cartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\pages\\reviewmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:pages\\reviewmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\pages\\productmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:pages\\productmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\pages\\ordermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:pages\\ordermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\orderrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\productrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.consoleapp\\strikeballshop.consoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D28CFF01-F017-4CB2-AB84-6DA27F830CCE}|StrikeBallShop.ConsoleApp.csproj|solutionrelative:strikeballshop.consoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\strikeballshop.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\productreviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\productratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\storagerep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\categoryrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C370D46B-36B7-40FC-B995-B9319277BAE8}|..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.bll\\strikeballshop.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB933BD-2E41-49A9-956B-E1145611A971}|..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dal\\repositories\\productreviewrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\oder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\productrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\productreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BE3EBD-1BA4-4CBA-A4EB-893753FFBA91}|..\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj|d:\\university\\253505\\mdisubd\\strikeballshop.dml\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminMenu.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\AdminMenu.cs",
+              "RelativeDocumentMoniker": "Pages\\AdminMenu.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\AdminMenu.cs",
+              "RelativeToolTip": "Pages\\AdminMenu.cs",
+              "ViewState": "AQIAAGIBAAAAAAAAAAAuwEcBAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:00:08.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAhwBIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:46:59.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\UserRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\UserRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\UserRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\UserRep.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAswCUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:11:34.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBConnect.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Database\\DBConnect.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Database\\DBConnect.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Database\\DBConnect.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Database\\DBConnect.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:11:01.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartItemRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\CartItemRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\CartItemRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\CartItemRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\CartItemRep.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwDMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:17:59.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\CartRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\CartRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\CartRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\CartRep.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAuwA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:16:47.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductRatingRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\ProductRatingRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\ProductRatingRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\ProductRatingRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\ProductRatingRep.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwA8AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:21:19.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConsoleMenu.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\ConsoleMenu.cs",
+              "RelativeDocumentMoniker": "Pages\\ConsoleMenu.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\ConsoleMenu.cs",
+              "RelativeToolTip": "Pages\\ConsoleMenu.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAADwv7kAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:49:20.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CartMenu.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\CartMenu.cs",
+              "RelativeDocumentMoniker": "Pages\\CartMenu.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\CartMenu.cs",
+              "RelativeToolTip": "Pages\\CartMenu.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAAAF8AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:58:13.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConsoleHelper.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\HelpClasses\\ConsoleHelper.cs",
+              "RelativeDocumentMoniker": "HelpClasses\\ConsoleHelper.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\HelpClasses\\ConsoleHelper.cs",
+              "RelativeToolTip": "HelpClasses\\ConsoleHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T21:59:45.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\HelpClasses\\AuthService.cs",
+              "RelativeDocumentMoniker": "HelpClasses\\AuthService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\HelpClasses\\AuthService.cs",
+              "RelativeToolTip": "HelpClasses\\AuthService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvxYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:00:17.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PasswordHash.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\PasswordHash.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\PasswordHash.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\PasswordHash.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\PasswordHash.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T21:46:27.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CartItemService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\CartItemService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\CartItemService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\CartItemService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\CartItemService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAsAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:31:14.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\Cart.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Cart.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:01:46.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductMenu.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\ProductMenu.cs",
+              "RelativeDocumentMoniker": "Pages\\ProductMenu.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\ProductMenu.cs",
+              "RelativeToolTip": "Pages\\ProductMenu.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAIBJwEIAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:56:06.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\UserService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\UserService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\UserService.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwC4AAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:27:03.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReviewMenu.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\ReviewMenu.cs",
+              "RelativeDocumentMoniker": "Pages\\ReviewMenu.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\ReviewMenu.cs",
+              "RelativeToolTip": "Pages\\ReviewMenu.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowE0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:58:40.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderMenu.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\OrderMenu.cs",
+              "RelativeDocumentMoniker": "Pages\\OrderMenu.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\Pages\\OrderMenu.cs",
+              "RelativeToolTip": "Pages\\OrderMenu.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowD4AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:59:38.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\User.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\User.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\User.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwA8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:56:28.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StrikeBallShop.DAL.csproj",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\StrikeBallShop.DAL.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-07T17:09:57.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\CartService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\CartService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\CartService.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAawDcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:30:03.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "StrikeBallShop.ConsoleApp.csproj",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\StrikeBallShop.ConsoleApp.csproj",
+              "RelativeDocumentMoniker": "StrikeBallShop.ConsoleApp.csproj",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.ConsoleApp\\StrikeBallShop.ConsoleApp.csproj",
+              "RelativeToolTip": "StrikeBallShop.ConsoleApp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-07T17:07:49.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\ProductRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\ProductRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\ProductRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\ProductRep.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAwwA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:14:19.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrderRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\OrderRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\OrderRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\OrderRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\OrderRep.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAswAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:16:16.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\OrderService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\OrderService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\OrderService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:29:21.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\ProductService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\ProductService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\ProductService.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAkwB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:28:07.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "StorageService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\StorageService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\StorageService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\StorageService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\StorageService.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwCgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T21:38:18.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ProductReviewService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\ProductReviewService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\ProductReviewService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\ProductReviewService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\ProductReviewService.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAgwCYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:30:54.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ProductRatingService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\ProductRatingService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\ProductRatingService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\ProductRatingService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\ProductRatingService.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:35:17.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\Services\\CategoryService.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\Services\\CategoryService.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\Services\\CategoryService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:28:48.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "StorageRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\StorageRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\StorageRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\StorageRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\StorageRep.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAkwEEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:18:36.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CategoryRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\CategoryRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\CategoryRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\CategoryRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\CategoryRep.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:15:27.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "StrikeBallShop.BLL.csproj",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj",
+              "RelativeToolTip": "..\\StrikeBallShop.BLL\\StrikeBallShop.BLL.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-07T17:26:20.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProductReviewRep.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\ProductReviewRep.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DAL\\Repositories\\ProductReviewRep.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DAL\\Repositories\\ProductReviewRep.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DAL\\Repositories\\ProductReviewRep.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:20:48.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Storage.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Storage.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\Storage.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Storage.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\Storage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:02:52.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Oder.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Oder.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\Oder.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Oder.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\Oder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:02:34.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\CartItem.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\CartItem.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\CartItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:02:14.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProductRating.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\ProductRating.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\ProductRating.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\ProductRating.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\ProductRating.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:59:45.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\Product.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Product.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:59:00.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ProductReview.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\ProductReview.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\ProductReview.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\ProductReview.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\ProductReview.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:59:23.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\Category.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Category.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:57:36.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "..\\StrikeBallShop.DML\\Models\\Role.cs",
+              "ToolTip": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\Models\\Role.cs",
+              "RelativeToolTip": "..\\StrikeBallShop.DML\\Models\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:56:48.289Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xb/WgotzLUYnYCnfisUb0GFfvjimUn8E1czsHgUA1QgPXGjyjYPL8/yy085susjZAVOCsn0w++Yy9CJfYecrBw==",
+  "success": true,
+  "projectFilePath": "D:\\University\\253505\\MDiSUBD\\StrikeBallShop.DML\\StrikeBallShop.DML.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dimat\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
